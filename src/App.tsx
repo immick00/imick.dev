@@ -188,7 +188,9 @@ function App() {
       <Navbar />
       <main>
         <article id="about">
-          <h2 className="font-bold text-5xl text-center py">Hi, I'm Mick <span className="blog-title-emoji">👋</span></h2>
+          <h2 className="font-bold text-5xl text-center py">
+            Hi, I'm Mick <span className="blog-title-emoji">👋</span>
+          </h2>
           <div className="bg-[#333333] w-[700px] p-6 rounded-md my-10 mx-auto space-y-4 text-base/6">
             <p>
               I'm a driven full-stack developer and student at NAIT, passionate
@@ -237,7 +239,7 @@ function App() {
               <div className="flex space-x-2 items-center">
                 <h2 className="font-semibold text-xl">{project.name}</h2>
                 {project.github != "" && (
-                  <a href="#" className="flex">
+                  <a href={project.github} className="flex">
                     <img src={GithubLogo} className="w-5 h-5" />
                     <img src={ExternalLogo} className="w-3 h-3" />
                   </a>
@@ -265,7 +267,7 @@ function App() {
               onInput={(input) => {
                 console.log("Hello :)");
                 if (input == "clear") {
-                  setTerminalLineData([])
+                  setTerminalLineData([]);
                 } else {
                   setTerminalLineData([
                     ...terminalLineData,
